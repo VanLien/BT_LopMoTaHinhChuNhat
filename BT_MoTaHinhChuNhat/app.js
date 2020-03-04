@@ -22,16 +22,17 @@ function Rectangle(length,width) {
     this.display=function () {
         let c=document.getElementById("ractangle");
         let ctx=c.getContext("2d");
-        ctx.fillStyle="red";
-        ctx.fillRect(60,30,30,60);
+        ctx.fillStyle="blue";
+        ctx.fillRect(20,30,this.width,this.length);
     };
 }
-let number=new Rectangle(60, 30);
+let number=new Rectangle(60, 180);
 
 let length=number.getLength();
 let width=number.getWidth();
 let perimeter=number.getPerimeter();
 let acreage=number.getAcreage();
+number.display();
 document.getElementById("Result").innerHTML=
     "Chiều Dài : "+length+"<br>"+
     "Chiều Rông : "+width+"<br>"+
